@@ -1,0 +1,86 @@
+{%  extends 'base.html' %}
+
+{% block body %}
+<html lang="en">
+<head>
+  <title>Customer Master</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="col-md-6 col-md-offset-3 text-center">
+<form class="form-horizontal" action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Customer Master</legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="id">ID</label>
+      <div class="controls">
+        <input type="text" id="id" name="id" placeholder="" class="input-xlarge">
+        <p class="help-block">ID can contain any letters or numbers, without spaces</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="name">Name</label>
+      <div class="controls">
+        <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+        <p class="help-block">Please provide your Name</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="address">Address</label>
+      <div class="controls">
+        <input type="text" id="address" name="address" placeholder="" class="input-xlarge">
+        <p class="help-block">Address should be at least 20 characters</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="city">City</label>
+      <div class="controls">
+        <input type="search" id="city" name="city" placeholder="" class="input-xlarge">
+        <p class="help-block">Enter city name here</p>
+      </div>
+    </div>
+
+      <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="phone">Phone No.</label>
+      <div class="controls">
+        <input type="tel" id="phone" name="phone" placeholder="" class="input-xlarge">
+        <p class="help-block">Enter Phone No. here</p>
+      </div>
+    </div>
+
+       <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="email">Email</label>
+      <div class="controls">
+        <input type="email" id="email" name="email" placeholder="" class="input-xlarge">
+        <p class="help-block">Enter your mail here</p>
+      </div>
+    </div>
+
+
+
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <a href="{% url 'account:customerlist' %}"><button class="btn btn-success" type="button">Submit</button></a>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

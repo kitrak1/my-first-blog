@@ -1,0 +1,40 @@
+{% block body %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% block head %} <title>Register</title>{% endblock %}
+     {% load staticfiles %}
+    <link rel= "stylesheet" href ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<br>
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">CRM</a>
+        </div>
+        <div id="navbar" class="navbar-header">
+            <div class="nav navbar-nav navbar-right">
+                <a class="navbar-brand" href="{% url 'account:login' %}">Login</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <h1>Register</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p}}
+         <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+{% endblock %}

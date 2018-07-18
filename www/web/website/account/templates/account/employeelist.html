@@ -1,0 +1,41 @@
+{%  extends 'base.html' %}
+
+{% block body %}
+
+
+<!-- Page Content -->
+
+<div class="w3-container w3-teal">
+
+</div>
+    <div class="container">
+        <h2>Employee List</h2>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>DOB</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for a in datalist %}
+            <tr>
+                <td>{{a.ID}}</td>
+                <td>{{a.Name}}</td>
+                <td>{{a.Address}}</td>
+                <td>{{a.City}}</td>
+                <td>{{a.DOB}}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,148 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+ <style>
+         .error {color: #FF0000;}
+      </style>
+<title>Admission</title>
+<meta charset="utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+<style type="text/css">
+#owl-demo .item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+</style>
+</head>
+<body pbzloc="18">
+
+
+
+
+<header class="fixed-header">
+  <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div>
+        <div class="navbar-header">
+      <div class="logo"><a href="{% url 'new:index' %}"><img src="{% static 'images/logo.png' %}" alt=""></a> </div>
+          <button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button"></button>
+          </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">            
+            <li><a href="{% url 'new:about' %}">About Us</a></li>
+            <li><a href="{% url 'new:services' %}">Services </a></li>
+            <li><a href="{% url 'new:data' %}">Admission</a></li>
+            <li><a href="{% url 'new:faq' %}">FAQ</a></li>
+            <li><a href="{% url 'new:contact' %}">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="inner-header">
+  <div class="overlay" pbzloc="183">&nbsp;</div>
+  <div class="container">
+    <div class="title">
+      <div class="row">
+        <div class="col-sm-12"><a href="booking.html"  class="btn purple-btn2 hidden">Book Tour</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- header Section end here   --><!-- content section start -->
+
+<section class="inner-page">
+  <div class="container" pbzloc="46">
+    <h1></h1>
+    <div class="list-box clearfix">
+  
+  
+  
+    <div class="form-area" > 
+            <form role="form" method="post" action="paymail.php">  
+              <br style="clear:both">
+              <div class="form-group">
+                <h1 align="center">Admission form</h1><br>
+				</div>
+             
+			  <div class="col-sm-5" style="margin-left:350px;"> 
+              <div class="form-group">
+                <input type="text" class="form-control" id="fname"  required="true" name="fname" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="lname"  required="true" name="lname" placeholder="Last Name"   >
+              </div>
+			   <div class="form-group">
+                <textarea class="form-control" type="textarea" id="address1" name="address1" required="true" placeholder="Address 1" maxlength="100" rows="3"></textarea>
+              </div>
+			   <div class="form-group">
+                <textarea class="form-control" type="textarea" id="address2" name="address2" placeholder="Address 2" maxlength="100" rows="3"></textarea>
+              </div>
+			   <div class="form-group">
+                <input type="text" class="form-control" id="city" name="city"  required="true" placeholder="City" >
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="state" name="state"  required="true" placeholder="State" >
+              </div>
+			   <div class="form-group">
+                <input type="text" class="form-control" id="zip" name="zip"  required="true" placeholder="Zip Code" >
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="email" name="email"  required="true" placeholder="Email" >
+              </div>
+             
+              <button type="submit" id="submit" name="submit" class="btn purple-btn">Pay</button>
+			  
+			
+            </form>
+          </div>
+  
+  
+  
+  
+    </div>
+  
+    
+  </div>
+</section>
+<!-- content section end --><!-- cta section start--> 
+
+<!-- cta section end -->
+
+<footer>
+  <div class="container-fluid">
+    <div class="copy-right">
+      <div class="row">
+        <div class="col-sm-6 text-left">Copyright 2018 NTX Wine Tours</div>
+        <div class="col-sm-6 text-right">
+          <ul class="footer-menu">
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-use.html">Terms of Use</a></li>
+        
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+
+</html>

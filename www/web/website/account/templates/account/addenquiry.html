@@ -1,0 +1,93 @@
+{%  extends 'base.html' %}
+
+{% block body %}
+<html lang="en">
+<head>
+  <title>Add Enquiry</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="col-md-6 col-md-offset-3 text-center">
+<form class="form-horizontal" action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Enquiry Type</legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="id">ID</label>
+      <div class="controls">
+        <input type="text" id="id" name="id" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+      <br>
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label">Customer</label>
+        <select>
+            <option value="paper">Paper</option>
+            <option value="phone">Phone</option>
+            <option value="tender">Tender</option>
+            <option value="email">Email</option>
+            <option value="other">Other</option>
+          </select>
+    </div>
+
+      <br>
+
+      <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="date">Date</label>
+      <div class="controls">
+        <input type="date" id="date" name="date" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+
+       <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="enq.no">Enq.No</label>
+      <div class="controls">
+        <input type="text" id="enq.no" name="enq.no" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+
+      <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="remark">Remark</label>
+      <div class="controls">
+        <input type="text" id="remark" name="remark" placeholder="" class="input-xlarge">
+      </div>
+    </div>
+
+      <br>
+
+      <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label">Enq. Type</label>
+        <select>
+            <option value="paper">Paper</option>
+            <option value="phone">Phone</option>
+            <option value="tender">Tender</option>
+            <option value="email">Email</option>
+            <option value="other">Other</option>
+          </select>
+    </div>
+
+      <br>
+
+      <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <a href="{% url 'account:enquirylist' %}"><button class="btn btn-success" type="button">Submit</button></a>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

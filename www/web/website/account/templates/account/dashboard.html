@@ -1,0 +1,56 @@
+{%  extends 'base.html' %}
+
+{% block body %}
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:12%">
+  <h3 class="w3-bar-item">Menu</h3>
+    <a href="{% url 'account:addemployee' %}" class="w3-bar-item w3-button">Add Employee</a>
+    <a href="{% url 'account:employeelist' %}" class="w3-bar-item w3-button">Employee List</a>
+    <a href="{% url 'account:enquirytype' %}" class="w3-bar-item w3-button">Enquiry Type </a>
+    <a href="{% url 'account:enquirytypelist' %}" class="w3-bar-item w3-button">Enq Type List</a>
+    <a href="{% url 'account:citymaster' %}" class="w3-bar-item w3-button">City Master</a>
+    <a href="{% url 'account:citylist' %}" class="w3-bar-item w3-button">City List</a>
+    <a href="{% url 'account:department' %}" class="w3-bar-item w3-button">Department</a>
+    <a href="{% url 'account:departmentlist' %}" class="w3-bar-item w3-button">Department List</a>
+    <a href="{% url 'account:productmaster' %}" class="w3-bar-item w3-button">Product Master</a>
+    <a href="{% url 'account:productlist' %}" class="w3-bar-item w3-button">Product List</a>
+    <a href="{% url 'account:customermaster' %}" class="w3-bar-item w3-button">Customer Master</a>
+    <a href="{% url 'account:customerlist' %}" class="w3-bar-item w3-button">Customer List</a>
+    <a href="{% url 'account:itemmaster' %}" class="w3-bar-item w3-button">Item Master</a>
+    <a href="{% url 'account:itemlist' %}" class="w3-bar-item w3-button">Item List</a>
+    <a href="{% url 'account:addenquiry' %}" class="w3-bar-item w3-button">Add Enquiry</a>
+    <a href="{% url 'account:enquirylist' %}" class="w3-bar-item w3-button">Enquiry List</a>
+
+
+  <div style="background-color:;color:white;padding:30px"></div>
+<div style="background-color:;padding:30px 30px 200px"></div>
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:12%">
+
+<div class="w3-container w3-teal">
+  <h1>CRM Application</h1>
+</div>
+</div>
+
+
+{% endblock %}

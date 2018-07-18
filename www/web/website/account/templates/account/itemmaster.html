@@ -1,0 +1,74 @@
+{%  extends 'base.html' %}
+
+{% block body %}
+
+<html lang="en">
+<head>
+  <title>Item Master</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="col-md-6 col-md-offset-3 text-center">
+<form class="form-horizontal" action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <legend class="">Item Master</legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="id">ID</label>
+      <div class="controls">
+        <input type="text" id="id" name="id" placeholder="" class="input-xlarge">
+        <p class="help-block">ID can contain any letters or numbers, without spaces</p>
+      </div>
+    </div>
+      <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="id">Item No.</label>
+      <div class="controls">
+        <input type="text" id="no." name="no." placeholder="" class="input-xlarge">
+        <p class="help-block">Please Enter Item no.</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="name">Name</label>
+      <div class="controls">
+        <input type="text" id="name" name="name" placeholder="" class="input-xlarge">
+        <p class="help-block">Please provide your Name</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="unit">Unit</label>
+      <div class="controls">
+        <input type="text" id="unit" name="unit" placeholder="" class="input-xlarge">
+        <p class="help-block">Please Enter Unit</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Password -->
+      <label class="control-label"  for="price">Price</label>
+      <div class="controls">
+        <input type="number" id="price" name="price" placeholder="" class="input-xlarge">
+        <p class="help-block">Enter price name here</p>
+      </div>
+    </div>
+
+      <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <a href="{% url 'account:itemlist' %}"><button class="btn btn-success" type="button">Submit</button></a>
+      </div>
+    </div>
+  </fieldset>
+</form>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
